@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Online_Education
+namespace StudyOnline
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             string studyingForm1 = Console.ReadLine().ToLower();
             int students1 = int.Parse(Console.ReadLine());
             string studyingForm2 = Console.ReadLine().ToLower();
@@ -20,7 +19,7 @@ namespace Online_Education
 
             int sumOnline = 0;
             int sumOnsite = 0;
-            int sum = 0;
+            int sumTotal = 0;
 
             switch (studyingForm1)
             {
@@ -39,6 +38,7 @@ namespace Online_Education
                 case "onsite":
                     sumOnsite += students2;
                     break;
+
             }
             switch (studyingForm3)
             {
@@ -49,18 +49,18 @@ namespace Online_Education
                     sumOnsite += students3;
                     break;
             }
+            sumTotal = sumOnline + sumOnsite;
 
             if (sumOnsite > 600)
             {
                 sumOnline += sumOnsite - 600;
                 sumOnsite = 600;
             }
+            Console.WriteLine($"Online students: {sumOnline}");
+            Console.WriteLine($"Onsite students: {sumOnsite}");
+            Console.WriteLine($"Total students: {sumTotal}");
 
-            sum = sumOnline + sumOnsite;
-
-            Console.WriteLine("Online students: {0}", sumOnline);
-            Console.WriteLine("Onsite students: {0}", sumOnsite);
-            Console.WriteLine("Total students: {0}", sum);
         }
     }
 }
+
