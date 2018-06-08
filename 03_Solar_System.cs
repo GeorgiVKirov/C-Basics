@@ -55,71 +55,17 @@ namespace SolarSystem
             double distanceTotal = distance * 2;
             double distanceInDays = (distance * 226) * 2 + daysOnPlanet;
 
-            if (planet == "mercury" && daysOnPlanet <= maxDaysOnPlanet)
+            if ((planet == "mercury" || planet == "venus" || planet == "mars" || planet == "jupiter" || planet == "saturn" || planet == "uranus" || planet == "neptune") && daysOnPlanet <= maxDaysOnPlanet)
             {
                 Console.WriteLine($"Distance: {distanceTotal:f2}");
                 Console.WriteLine($"Total number of days: {distanceInDays:f2}");
+            }
 
-            }
-            else if (planet == "mercury" && daysOnPlanet > maxDaysOnPlanet)
-            {
-                Console.WriteLine("Invalid number of days!");
-            }
-            else if (planet == "venus" && daysOnPlanet <= maxDaysOnPlanet)
-            {
-                Console.WriteLine($"Distance: {distanceTotal:f2}");
-                Console.WriteLine($"Total number of days: {distanceInDays:f2}");
-            
-            }
-            else if (planet == "venus" && daysOnPlanet > maxDaysOnPlanet)
-            {
-                Console.WriteLine("Invalid number of days!");
-            }
-            else if (planet == "mars" && daysOnPlanet <= maxDaysOnPlanet)
-            {
-                Console.WriteLine($"Distance: {distanceTotal:f2}");
-                Console.WriteLine($"Total number of days: {distanceInDays:f2}");
-            }
-            else if (planet == "mars" && daysOnPlanet > maxDaysOnPlanet)
-            {
-                Console.WriteLine("Invalid number of days!");
-            }
-            else if (planet == "jupiter" && daysOnPlanet <= maxDaysOnPlanet)
-            {
-                Console.WriteLine($"Distance: {distanceTotal:f2}");
-                Console.WriteLine($"Total number of days: {distanceInDays:f2}");
-            }
-            else if (planet == "jupiter" && daysOnPlanet > maxDaysOnPlanet)
-            {
-                Console.WriteLine("Invalid number of days!");
-            }
-            else if (planet == "saturn" && daysOnPlanet <= maxDaysOnPlanet)
-            {
-                Console.WriteLine($"Distance: {distanceTotal:f2}");
-                Console.WriteLine($"Total number of days: {distanceInDays:f2}");
-            }
-            else if (planet == "saturn" && daysOnPlanet > maxDaysOnPlanet)
-            {
-                Console.WriteLine("Invalid number of days!");
-            }
-            else if (planet == "uranus" && daysOnPlanet <= maxDaysOnPlanet)
-            {
-                Console.WriteLine($"Distance: {distanceTotal:f2}");
-                Console.WriteLine($"Total number of days: {distanceInDays:f2}");
-            }
-            else if (planet == "uranus" && daysOnPlanet > maxDaysOnPlanet)
-            {
-                Console.WriteLine("Invalid number of days!");
-            }
-            else if (planet == "neptune" && daysOnPlanet <= maxDaysOnPlanet)
-            {
-                Console.WriteLine($"Distance: {distanceTotal:f2}");
-                Console.WriteLine($"Total number of days: {distanceInDays:f2}");
-            }
-            else if (planet == "neptune" && daysOnPlanet > maxDaysOnPlanet)
+            else if ((planet == "mercury" || planet == "venus" || planet == "mars" || planet == "jupiter" || planet == "saturn" || planet == "uranus" || planet == "neptune") && daysOnPlanet > maxDaysOnPlanet)
             {
                 Console.WriteLine("Invalid number of days!");
             }
         }
     }
 }
+
